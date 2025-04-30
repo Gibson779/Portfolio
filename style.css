@@ -344,4 +344,8 @@ section{
     margin: auto 0;
 }
 
-/* Experiece
+/* Experiece */
+
+#experience {
+    position: relative;
+}
