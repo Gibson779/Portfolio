@@ -9,6 +9,16 @@
 
     }
 }
+    @media screen and (max-width: 1550px) {
+    #experience-details-container {
+
+        flex-wrap: wrap;
+   
+        
+
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
     #desktop-nav {
@@ -51,7 +61,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1550px) {
     #contact,
     footer{
         height: 40vh;
