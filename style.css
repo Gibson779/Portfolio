@@ -66,7 +66,7 @@ body {
     }
 
     .logo {
-        font-size: 2rem;
+        font-size: 25px;
     }
 
     .logo:hover{
@@ -104,6 +104,7 @@ body {
 .menu-links {
     position: absolute;
     top: 100%;
+    
     right: 0;
     background-color: white;
     width: fit-content;
@@ -112,6 +113,16 @@ body {
     transition: all 0.3 ease-in-out;
 
 }
+
+.menu-links.open{
+   position: fixed;   /* keeps it at the top of the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+
 
 .menu-links a {
     display: block;
@@ -162,39 +173,34 @@ body {
 /* Sections */
 
 
-section{
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
-}
-
 .section-container{
     display: flex;
 }
 
 /*Profile*/
 
-#profile {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 80vh;
+#profile{
+     display: flex;
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;       /* Center text under image */
+    margin: 10px;
+    
+
+}
+.profile_img{
+     width: 100%;
+    max-width: 250px;   /* Optional: keeps image from getting too big */
+    height: auto;
+   padding-bottom: 20px;
 
 }
 
-.section_pic-container {
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-
-}
 
 .section_text{
     align-self: center;
     text-align: center;
+    padding: 10px;
 
 }
 
@@ -223,7 +229,7 @@ section{
 #socials-container{
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 40px;
     gap: 5rem;
 
 }
@@ -252,6 +258,7 @@ section{
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    
 }
 
 .btn-color-1,
@@ -294,13 +301,25 @@ section{
 /*About Section*/
 
 #about{
-    position: relative;
+    padding: 70px;
+    
+    
 }
 
 .about-containers{
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+
+}
+
+
+.section_pic-container {
+    display: flex;
+    height: 300px;
+    width: 400px;
+    margin: 0%;
+
 }
 
 .about-details-container{
@@ -361,6 +380,7 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 4rem;
   }
   
   .article-container {
@@ -383,41 +403,110 @@ section{
     cursor: default;
   }
   
+  #projects{
+    padding-top: 50px ;
+  }
 
 /* Projects */
-
-#projects{
-    position: relative;
+/* General Styles */
+.section_text_p1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.color-container{
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.project-img{
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+.project-card {
+    padding: 0 20px;
 }
 
-.project-title{
-    margin: 1rem;
-    color: black;
+/* Flexbox Layout for Projects */
+.project-containers {
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap onto new rows */
+    gap: 20px;        /* Spacing between items */
+    justify-content: center;  /* Center the items */
+    transition: all 300ms ease;
 }
 
-.project-btn{
-    color: black;
-    border-color: rgb(163, 163, 163);
+.details-container {
+    background-color: #f9f9f9; /* Background color for the project cards */
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%; /* Full width for small screens */
+    max-width: 300px; /* Optional: limit the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+.project-img {
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.project-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.project-btn:hover {
+    background-color: #939393;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .project-containers {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;     /* Center items */
+    }
+
+    .details-container {
+        width: 90%;  /* Let the project card take up 90% of the width */
+        max-width: none; /* Remove max-width constraint */
+    }
+    .project-img{
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .section_text_p1 {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
 /*CONTRACT*/
 
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  padding: 20px 0 20px 0;
+  
 }
 
 .contact-info-upper-container {
@@ -427,7 +516,7 @@ section{
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   background: (250, 250, 250);
-  margin : 5rem auto;
+  margin : 20px auto;
   padding: 2.5rem;
 }
 

@@ -1,7 +1,7 @@
 @media screen and (max-width: 1400px) {
     #profile {
         height: 83vh;
-        margin-bottom: 6rem;
+        margin-bottom: 20px;
     }
     
     #about-containers{
@@ -30,6 +30,8 @@
     
     #hamburger-nav {
         display: flex;
+        
+        
 
     }
 
@@ -68,7 +70,8 @@
 
     #contact,
     footer{
-        height: 40vh;
+        
+        margin: 0;
     }
     #profile{
         height: 83vh;
