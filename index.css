@@ -1,6 +1,6 @@
 @media screen and (max-width: 1400px) {
     #profile {
-        height: 83vh;
+        
         margin-bottom: 20px;
     }
     
@@ -15,13 +15,6 @@
     }
 }
 
-.experience-details-container{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
- 
-}
 
 @media screen and (max-width: 1200px) {
     #desktop-nav {
@@ -60,7 +53,7 @@
     }
 
     .section_pic-container{
-        width: 275px;
+        width: 200px;
         height: 275px;
         margin: 0 auto 2rem;
     }
@@ -128,3 +121,28 @@
 
 }
 
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .project-containers {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;     /* Center items */
+    }
+
+    .details-container {
+        width: 90%;  /* Let the project card take up 90% of the width */
+        max-width: none; /* Remove max-width constraint */
+    }
+    .project-img{
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .section_text_p1 {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
